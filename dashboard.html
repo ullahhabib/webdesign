@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+<title> Admin Panel </title>
+<style>
+*{
+margin: 0px;
+padding: 0px;
+font-family: sans-serif;
+}
+#header{
+width: 100%;
+height: 120px;
+background: black;
+color: white;
+}
+#sidebar{
+position: fixed;
+width: 200px;
+height: 100%;
+background: #151719;
+left: -200px;
+transition: all 500ms linear;
+}
+#sidebar.active{
+left: 0px;
+}
+#data{
+height: 700px;
+background: white;
+}
+#sidebar ul li{
+color: rgba(230,230,230,0.9);
+list-style: none;
+padding:  15px 10px;
+border-bottom: 1px solid rgba(100,100,100,0.3);
+}
+#sidebar .toggle-btn{
+position: absolute;
+left: 230px;
+top: 20px;
+}
+
+#sidebar .toggle-btn span{
+display: block;
+width: 30px;
+height: 5px;
+background: #151719;
+margin: 5px 0px;
+}
+footer{
+background-color: white;
+padding: 10px 0px;
+}
+</style>
+</head>
+<body style="color: yellow;">
+    <h1> !!! we welcome you !!! </h1>
+<script>
+function toggleSidebar(){
+document.getElementById("sidebar").classList.toggle('active');
+}
+</script>
+<div id = "header">
+
+</div>
+<div id ="sidebar">
+<div class="toggle-btn" onclick = "toggleSidebar()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<ul>
+<a href="profile.html"><li> Client Profile </li></a>
+<a href="fuelquote.html"><li> Fuel Quote Form </li></a>
+<a href="clientprofile.jsp"><li> Quote History </li></a>
+<a href="index.html"><li> Logout </li></a>
+</ul>
+</div>
+
+<div id = "data"></div>
+<footer>
+<div id = "wrapper">
+<nav>
+<center> <h2> Copyright © Qadri-Habibullah-Shaikh </h2></center>
+</nav>
+</div>
+</footer>
+</body>

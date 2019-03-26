@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Quote Form</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+    </head>
+    <body>
+       <form oninput="totalAmount.value=parseInt(gallonsRequested.value)*parseInt(price.value)" action="fuelquote.jsp" method="post">
+        <div class="Quoteform">
+        <span style="font-size: 10pt; font-family: Lucida Sans Unicode; color: #000000;">
+        
+        <fieldset><legend><span style="font-size: 15px;">&nbsp;FUEL QUOTE FORM&nbsp;</span></legend>
+         
+         <label for="Email Address" class="left">Email Address: </label>   
+        <font color="#FF0000">*</font><input type="alphanumeric" name="email" id="email" class="field" value=""required />
+        
+        <label for="Gallons Requested" class="left"> Gallons Requested:</label>
+        <font color="#FF0000">*</font><input type="number" name="gallonsRequested" id="gallonsRequested" class="field" value="" maxlength="40" tabindex="1"required><br /><br />
+
+        <label for="Delivery Address" class="left">Delivery Address: </label>   
+        <font color="#FF0000">*</font><input type="alphanumeric" name="deliveryAddress" id="deliveryAddress" class="field" value=""required />
+        <br /><br />
+        
+        <label for="Delivery Date" class="left"> Delivery Date</label>
+        <font color="#FF0000">&nbsp;&nbsp;*</font><input id="datepicker" name="deliveryDate" required/> <br/> <br/>
+
+        <label for="Suggested Price" class="left">Suggested Price: </label>
+        <font color="#FF0000"></font><output type="text" name="price" id="price"> 3 </output><br /><br />
+        
+        
+        <label for="Total Amount Due" class="left">Total Amount Due:</label>
+        <font color="#FF0000"></font><input type="text" name="totalAmount" id="totalprice"><br /><br />
+        
+        <input type="submit" name="submit" id="submit" class="button" value="Submit" tabindex="11" /><br /><br />
+</span>
+</div>
+</form>
+    </body>
+</html>
+
